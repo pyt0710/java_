@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class HiLo {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        //生成随机数
+        int theNumber = (int)(Math.random()*100+1);
+        //System.out.println(theNumber);
+        int guss = 0;
+        System.out.println("输入");
+        while(guss != theNumber){
+            System.out.println("enter");
+            guss = scan.nextInt();
+            System.out.println("you enter " + guss + ".");
+            if (guss<theNumber){
+                System.out.println("low");
+            }
+            else if(guss>theNumber){
+                System.out.println("high");
+            }
+            else{
+                System.out.println("win");
+            }
+        }
+
+
+
+        scan.close();
+    }
+}
